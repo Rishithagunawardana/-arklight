@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace LOVE
+{
+    class GAME 
+    {
+        static void Main(string[] args)
+        {
+            int ctr, ctr1;
+            string name1, name2;
+            string sameletter = "";
+            int numberofsameletter;
+            string answer1 = "", answer2 = "";
+            int numberofallletters;
+            int totalnumbers;
+
+
+            Console.WriteLine("Enter his name? :-");
+            name1 = Console.ReadLine();
+            Console.WriteLine("Enter her Name");
+            name2 = Console.ReadLine();
+            numberofallletters = name1.Length + name2.Length;
+            Console.WriteLine("numbers of letter;" + numberofallletters);
+
+
+            for (ctr = 0; ctr <= name1.Length - 1; ++ctr)
+            {
+                answer1 = name1.Substring(ctr, 1);
+                for (ctr1 = 0; ctr1 <= name2.Length - 1; ++ctr1)
+                {
+                    answer2 = name2.Substring(ctr1, 1);
+                    if (answer1 == answer2)
+                    {
+                        sameletter = sameletter + (answer1 + answer2);
+                    }
+                }
+            }
+
+            numberofsameletter = sameletter.Length;
+            Console.WriteLine("number of same; " + numberofsameletter);
+            totalnumbers = numberofallletters - numberofsameletter;
+            Console.WriteLine("total count; " + totalnumbers);
+
+            if (totalnumbers % 6 == 1)
+                Console.WriteLine("Friends");
+            else if (totalnumbers % 6 == 2)
+                Console.WriteLine("Lovers");
+            else if (totalnumbers % 6 == 3)
+                Console.WriteLine("Afair");
+            else if (totalnumbers % 6 == 4)
+                Console.WriteLine("maried");
+            else if (totalnumbers % 6 == 5)
+                Console.WriteLine("Enemies");
+            else if (totalnumbers % 6 == 0)
+                Console.WriteLine("Sweet");
+            Console.ReadLine();
+
+        }
+    }
+}
