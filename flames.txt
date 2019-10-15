@@ -47,17 +47,17 @@ namespace LOVE
             Console.WriteLine("total count; " + totalnumbers);
 
             if (totalnumbers % 6 == 1)
-                Console.WriteLine("Friends");
+                Console.WriteLine("Friends with Benifits");
             else if (totalnumbers % 6 == 2)
-                Console.WriteLine("Lovers");
+                Console.WriteLine("Lovers on sky");
             else if (totalnumbers % 6 == 3)
-                Console.WriteLine("Afair");
+                Console.WriteLine("Affair at its peak");
             else if (totalnumbers % 6 == 4)
-                Console.WriteLine("maried");
+                Console.WriteLine("Married and live happier");
             else if (totalnumbers % 6 == 5)
-                Console.WriteLine("Enemies");
+                Console.WriteLine("Enemies for life ");
             else if (totalnumbers % 6 == 0)
-                Console.WriteLine("Sweet");
+                Console.WriteLine("Sweet as candy");
             Console.ReadLine();
 
         }
